@@ -8,17 +8,16 @@
 </head>
 <body>
 
-
-        <!-- NAVBAR -->
-<!-- <header>
-<nav> -->
+      <!-- NAVBAR -->
+<header>
+<nav>
 <!-- logo -->
- <!-- <a href="index.html" class="logo">
+ <a href="index.html" class="logo">
     <img src="" alt="logo">
     <span>AfriConnect Summit 2026</span>
- </a> -->
+ </a>
  <!-- liens -->
- <!-- <ul>
+ <ul>
     <li>
         <a href="index.html">Acceuil</a>
     </li>
@@ -35,11 +34,259 @@
 
 
 
-
-
+ <!-- Dark mode -->
+ <button id="themebtn">
+               <i class="bi bi-moon"></i>
+ </button>
+<!-- Menu Hamburger -->
+  <button id="menubtn">
+               <i class="bi bi-list"></i>
+ </button>
 
 </nav>
-</header> -->
+</header>
+
+
+<main>
+<section class="hero-contact">
+    <h1>Contact</h1>
+    <nav class="fil">
+        <a href="index.html">Acceuil</a> >
+        <span>Contact</span>
+
+    </nav>
+
+</section>
+
+<!-- ===============formulaire================== -->
+ <section class="contact">
+    <!-- la partie gauche -->
+     <div>
+        <form id="contactform">
+            <!-- nom -->
+             <div class="champ">
+                <label for="nom">Nom Complet</label>
+                <input type="text" id="nom">
+                <small id="erreurnom"></small>
+
+             </div>
+              <!-- Email -->
+             <div class="champ">
+                <label for="email">Email </label>
+                <input type="email" id="email">
+                <small id="erreuremail"></small>
+
+             </div>
+              <!-- telephone -->
+             <div class="champ">
+                <label for="telephone"> Téléphone</label>
+                <input type="tel" id="telephone">
+                <small id="erreurtelephone"></small>
+
+             </div>
+             <!-- type -->
+             <div class="champ">
+                 <label for="type">Type de participation</label>
+                    <select id="type">
+                        <option value="">Choisir...</option>
+                        <option>participant</option>
+                        <option>mentor</option>
+                        <option>Partenaire</option>
+                        <option>Bénévole</option>
+                    </select>
+             </div>
+             <small id="errortype"></small>
+                     <!-- Pays -->
+             <div class="champ">
+                 <label for="pays">Pays</label>
+                    <select id="pays">
+                        <option value="">Choisir...</option>
+                        <option>Sénégal</option>
+                        <option>Mali</option>
+                        <option>Gambie</option>
+                        <option>Guinée</option>
+                         <option>Burkina Faso</option>
+                        <option>Togo</option>
+                        <option>Bénin</option>
+                        <option>Cameroun</option>
+                        <option>Niger</option>
+                    </select>
+             </div>
+             <small id="errorpays"></small>
+
+             <!-- message -->
+              
+                <div class="champ">
+                    <label for="message">Motivation :</label>
+                    <textarea id="message" ></textarea>
+                    <small  id="errormessage"></small>
+                </div>
+                      <button id="btnEnvoyer">Envoyer</button>
+                    <p id="successMessage" ></p>
+              
+        </form>
+     </div>
+     <!-- la partie droite -->
+      <div class="infos">
+        <h2>Nos coordonnées</h2>
+        <p></p>
+        <p>Téléphone :  +221 77 000 00 00</p>
+        <p>Adress : Dakar , Sénégal</p>
+
+      </div>
+
+ </section>
+<!-- FAQ -->
+ <section class="faq">
+        <h2>Questions fréquentes</h2>
+
+        <!-- Question 1 -->
+
+        <div class="accordion">
+            <input type="checkbox" id="q1">
+            <label for="q1">
+                Comment participer ?
+            </label>
+            <div class="content">
+                Inscrivez-vous grâce au formulaire.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+
+        <div class="accordion">
+            <input type="checkbox" id="q2">
+            <label for="q2">
+                L'inscription est-elle gratuite ?
+            </label>
+            <div class="content">
+                Oui.
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+
+        <div class="accordion">
+            <input type="checkbox" id="q3">
+            <label for="q3">
+                Qui peut participer ?
+            </label>
+            <div class="content">
+                Toute personne intéressée par le numérique.
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+
+        <div class="accordion">
+            <input type="checkbox" id="q4">
+            <label for="q4">
+                Peut-on participer en ligne ?
+            </label>
+            <div class="content">
+                Oui.
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+
+        <div class="accordion">
+            <input type="checkbox" id="q5">
+            <label for="q5">
+                Comment contacter l'équipe ?
+            </label>
+            <div class="content">
+                Via le formulaire de cette page.
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MAP -->
+
+    <section class="map">
+        <h2>Notre localisation</h2>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=..."
+        loading="lazy">
+        </iframe>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- ==============footer============== -->
+      <footer>
+        <div class="footer-container">
+            <div>
+            <h3>AfriConnect Summit</h3>
+            <p>Le plus grand sommet africain dédié à l'innovation.</p>
+        </div>
+
+        <div>
+            <h3>Navigation</h3>
+            <a href="index.html">Acceuil</a>
+            <a href="programme.html">Programme</a>
+            <a href="intervenants.html">Intervenats</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <h3>Suivez-nous</h3>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        </div>
+        <p>
+            © <span id="year"></span> AfriConnect Summit. Tous droits réservés.
+        </p>
+
+        <button id="backtop">
+             ↑
+        </button>
+
+      </footer>
     
 
 
