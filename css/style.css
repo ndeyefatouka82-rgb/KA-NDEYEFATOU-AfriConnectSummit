@@ -483,18 +483,7 @@ header{
     box-shadow: 0 15px 35px rgba(0,0,0,.3);
     transform: translateY(-30px);
 }
-/* .intervenant a{
-     text-decoration: none;
-    background: linear-gradient(135deg,#5b4dff,#9c3cff);
-    color: white;
-    padding: 16px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: .3s;
-    display: inline-block;
-    margin-top: 60px;
-   
-} */
+
 /* ===============sponsor=================== */
 .sponsors{
      background:#f8f8fc;
@@ -765,7 +754,7 @@ tbody td{
 }
 /* ================= FAQ ================= */
 
-/* .faq{
+.faq{
     max-width: 800px;
     margin: 80px auto;
     padding: 40px;
@@ -834,7 +823,7 @@ tbody td{
 
 .accordion input:checked + label + .content{
     max-height: 150px;
-    padding: 0 20px 20px; */
+    padding: 0 20px 20px;
 }
 /* ===== Fil d'Ariane ===== */
 
@@ -903,27 +892,27 @@ tbody td{
 }
 /* ==========================MEDIA QUERRYYYY============================== */
 /* ================= Tablette ================= */
-/* @media screen and (max-width:768px){
+@media screen and (max-width:768px){
 
-} */
+}
 
 /* ================= Téléphone ================= */
-/* @media screen and (max-width:480px){
+@media screen and (max-width:480px){
 
-} */
+}
 /* ===== Navbar normale ===== */
 
-/* .navbar{
+.navbar{
     
      background: rgba(255,255,255,0.96);
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 20px rgba(0,0,0,0.12);
     padding: 12px 8%;
-} */
+}
 
 /* ===== Navbar après le scroll ===== */
 
-/* .navbar.scrolled{
+.navbar.scrolled{
     position: fixed;
     top: 0;
     left: 0;
@@ -935,17 +924,17 @@ tbody td{
     background: transparent;
     transition: all 0.4s ease;
     z-index: 1000;
-} */
+}
 
 /* Couleur des liens */
 
-/* .navbar.scrolled a{
+.navbar.scrolled a{
     color: #897add;
-} */
+}
 
 /* Logo */
 
-/* .logo{
+.logo{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -954,20 +943,20 @@ tbody td{
     font-size: 24px;
     font-weight: 700;
     transition: .3s;
-} */
+}
 
-/* .navbar.scrolled .logo{
+.navbar.scrolled .logo{
     color: #222;
-} */
+}
 
-/* .logo img{
+.logo img{
     height: 55px;
     transition: .3s;
-} */
+}
 
 /* Effet shrink du logo */
-/* 
+
 .navbar.scrolled .logo img{
     height: 45px;
-} */
+}
 
