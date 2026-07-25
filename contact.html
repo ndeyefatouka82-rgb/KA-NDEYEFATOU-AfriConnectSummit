@@ -9,48 +9,51 @@
 <body>
 
       <!-- NAVBAR -->
-<header>
-<nav>
-<!-- logo -->
- <a href="index.html" class="logo">
-    <img src="" alt="logo">
-    <span>AfriConnect Summit 2026</span>
- </a>
- <!-- liens -->
- <ul>
-    <li>
-        <a href="index.html">Acceuil</a>
-    </li>
-    <li>
-        <a href="programme.html">Programme</a>
-    </li>
-    <li>
-        <a href="intervenants.html">Intervenants</a>
-    </li>
-    <li>
-        <a href="contact.html">Contact</a>
-    </li>
- </ul>
+<nav class="navbar">
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                <img src="images/logo africonnect summit 2.png" alt="logo">
+                AfriConnect<span class="span"> Summit 2026</span>
+            </a>
+            <!-- liens -->
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Acceuil</a>
+                </li>
+                <li>
+                    <a href="programme.html">Programme</a>
+                </li>
+                <li>
+                    <a href="intervenants.html">Intervenants</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
 
 
 
- <!-- Dark mode -->
- <button id="themebtn">
-               <i class="bi bi-moon"></i>
- </button>
-<!-- Menu Hamburger -->
-  <button id="menubtn">
-               <i class="bi bi-list"></i>
- </button>
+            <div class="icon-nav">
+                <!-- Dark mode -->
+                <button id="themebtn">
+                    <i class="bi bi-moon"></i>
+                </button>
+                <!-- Menu Hamburger -->
+                <button id="menubtn">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
 
-</nav>
-</header>
+        </nav>
 
 
 <main>
 <section class="hero-contact">
-    <h1>Contact</h1>
+    
     <nav class="fil">
+    <div>
+        <h1>Contact</h1>
+    </div>
         <a href="index.html">Acceuil</a> >
         <span>Contact</span>
 
@@ -60,9 +63,11 @@
 
 <!-- ===============formulaire================== -->
  <section class="contact">
+    
     <!-- la partie gauche -->
      <div>
-        <form id="contactform">
+        <p class="remp">Remplisser ce formulaire pour vous inscrire a l'AfriConnect Summit 2026</p>
+        <form class="contactform">
             <!-- nom -->
              <div class="champ">
                 <label for="nom">Nom Complet</label>
@@ -132,9 +137,15 @@
         <p></p>
         <p>Téléphone :  +221 77 000 00 00</p>
         <p>Adress : Dakar , Sénégal</p>
-
+             <div class="map">
+        <h2 class="loc">Notre localisation</h2>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=..."
+        loading="lazy">
+        </iframe>
+    </div>
       </div>
-
+      
  </section>
 <!-- FAQ -->
  <section class="faq">
@@ -204,25 +215,7 @@
 
     <!-- MAP -->
 
-    <section class="map">
-        <h2>Notre localisation</h2>
-        <iframe
-        src="https://www.google.com/maps/embed?pb=..."
-        loading="lazy">
-        </iframe>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
 </main>
 
@@ -252,42 +245,42 @@
 
 
      <!-- ==============footer============== -->
-      <footer>
+        <footer class="footer">
         <div class="footer-container">
             <div>
-            <h3>AfriConnect Summit</h3>
-            <p>Le plus grand sommet africain dédié à l'innovation.</p>
+                <img src="images/logo africonnect summit 2.png" alt="logo" height="60px">
+             <p>AfriConnect Summit © 2026</p>
+            </div>
+
+            <div>
+                <h3>Navigation</h3>
+                <ul class="links">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenats</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Suivez-nous</h3>
+                <p><i class="bi bi-envelope-fill"></i>contact@AfriTalent.com</p>
+          <p><i class="bi bi-telephone-fill"></i> 33 000 00 00</p>
+          <!-- les icons -->
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-facebook"></i>
+        </div>        
         </div>
-
-        <div>
-            <h3>Navigation</h3>
-            <a href="index.html">Acceuil</a>
-            <a href="programme.html">Programme</a>
-            <a href="intervenants.html">Intervenats</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <div>
-            <h3>Suivez-nous</h3>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-
-            <a href="#"><i class="fab fa-instagram"></i></a>
-
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-        </div>
-        </div>
-        <p>
-            © <span id="year"></span> AfriConnect Summit. Tous droits réservés.
-        </p>
-
+       
         <button id="backtop">
-             ↑
+            ↑
         </button>
+    </footer>
+    <p>
+            © <span id="year"></span> AfriConnect Summit. Tous droits réservés.
+    </p>
 
-      </footer>
-    
 
 
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap"
