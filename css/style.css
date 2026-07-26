@@ -1157,3 +1157,70 @@ body.bg .social-icons i{
     color: white;
     border: 1px solid #444;
 }
+/* ====================formulairee====================== */
+/* Champs valides */
+input.success,
+textarea.success,
+select.success{
+    border: 2px solid #28a745;
+}
+
+/* Champs invalides */
+input.error,
+textarea.error,
+select.error{
+    border: 2px solid #dc3545;
+}
+
+/* Messages d'erreur */
+small{
+    color: #dc3545;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Message de succès */
+#successMessage{
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* ===== Fade In ===== */
+
+.fade-in{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Slide In ===== */
+
+.slide-in{
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s ease;
+}
+
+.slide-in.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===== Zoom In ===== */
+
+.zoom-in{
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease;
+}
+
+.zoom-in.show{
+    opacity: 1;
+    transform: scale(1);
+}
