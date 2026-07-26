@@ -172,3 +172,64 @@ const observer = new IntersectionObserver((entries) => {
 elements.forEach(element => {
     observer.observe(element);
 });
+// ============compte à rebours en temps réel ============
+const conferenceDate = new Date("November 15, 2026 09:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = conferenceDate - now;
+
+    if (distance <= 0) {
+        document.getElementById("jour").textContent = "00";
+        document.getElementById("heures").textContent = "00";
+        document.getElementById("Minutes").textContent = "00";
+        document.getElementById("Secondes").textContent = "00";
+        return;
+    }
+
+    const jours = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const heures = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const secondes = Math.floor((distance % (1000 * 60)) / 1000);
+const counters = document.querySelectorAll(".counter h3");
+// =====================compteurrr
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+
+            counters.forEach(counter => {
+                const target = +counter.dataset.target;
+                let count = 0;
+
+                const increment = Math.max(1, Math.ceil(target / 100));
+
+                const updateCounter = () => {
+                    count += increment;
+
+                    if (count >= target) {
+                        counter.textContent = target;
+                    } else {
+                        counter.textContent = count;
+                        requestAnimationFrame(updateCounter);
+                    }
+                };
+
+                updateCounter();
+            });
+
+            observer.disconnect(); // L'animation ne se lance qu'une seule fois
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+observer.observe(document.querySelector(".counters"));
+    document.getElementById("jour").textContent = String(jours).padStart(2, "0");
+    document.getElementById("heures").textContent = String(heures).padStart(2, "0");
+    document.getElementById("Minutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("Secondes").textContent = String(secondes).padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
