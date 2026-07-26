@@ -959,4 +959,201 @@ tbody td{
 .navbar.scrolled .logo img{
     height: 45px;
 }
+/* Bouton hamburger caché sur PC */
+#menubtn{
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
 
+/* ================= MOBILE ================= */
+
+@media screen and (max-width:768px){
+
+    .navbar{
+        padding: 15px 5%;
+    }
+
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 0;
+
+        /* caché */
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+
+        transition: .3s;
+    }
+
+    /* menu ouvert */
+    .nav-links.active{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li{
+        list-style: none;
+    }
+
+    .nav-links a{
+        color: #222;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    #menubtn{
+        display: block;
+    }
+}
+/* ===== Mode sombre ===== */
+
+.dark-mode{
+    background: #121212;
+    color: #ffffff;
+}
+
+.dark-mode section{
+    background: #121212;
+}
+
+.dark-mode .card{
+    background: #1f1f1f;
+    color: white;
+}
+
+.dark-mode .navbar{
+    background: #1a1a1a;
+}
+
+.dark-mode .nav-links a{
+    color: white;
+}
+
+.dark-mode footer{
+    background: #0d0d0d;
+    color: white;
+
+.dark-mode {
+    background: #0d0d0d;
+    color: white;
+}}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select{
+    background: #2b2b2b;
+    color: white;
+    border: 1px solid #555;
+}
+/* body.bg{
+    background-color: #121212 !important;
+    color: white !important;
+} */
+
+body.bg .card,
+body.bg .cardsss{
+    background-color: #2c2c2c !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+}
+
+body.bg .navbar{
+    background-color: #1a1a1a !important;
+}
+
+body.bg h1,
+body.bg h2,
+body.bg h3,
+body.bg h4,
+body.bg h5,
+body.bg p,
+body.bg a{
+    color: white !important;
+}
+
+body.bg img{
+    filter: brightness(0.8);
+}
+body.bg .card,
+body.bg .cardss{
+    background-color: #2c2c2c !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+}
+/* footer */
+body.bg .footer{
+    background-color: #1a1a1a !important;
+    color: white !important;
+}
+
+body.bg .footer h5,
+body.bg .footer p,
+body.bg .footer li,
+body.bg .footer a{
+    color: white !important;
+}
+
+body.bg .footer-links a{
+    color: white !important;
+}
+
+body.bg .social-icons i{
+    color: white !important;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6{
+    color: white;
+}
+
+.dark-mode p{
+    color: #ddd;
+}
+
+.dark-mode a{
+    color: white;
+}
+
+.dark-mode .nav-links a{
+    color: white;
+}
+
+.dark-mode .fil a{
+    color: white;
+}
+
+.dark-mode .fil span{
+    color: #FFD700;
+}
+.dark-mode table{
+    background: #1f1f1f;
+    color: white;
+    border-color: #444;
+}
+
+.dark-mode th{
+    background: #2c2c2c;
+    color: white;
+}
+
+.dark-mode td{
+    background: #1f1f1f;
+    color: white;
+    border: 1px solid #444;
+}
