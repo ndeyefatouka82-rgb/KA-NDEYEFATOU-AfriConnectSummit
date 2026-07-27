@@ -1224,7 +1224,7 @@ small{
     opacity: 1;
     transform: scale(1);
 }
-
+/* =================filtrage================== */
 .planning{
     display: none;
 }
@@ -1236,4 +1236,38 @@ small{
 .tab.active{
     background: #6b46c1;
     color: white;
+}
+/* ========responsive================= */
+@media screen and (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .intervenant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+}
+@media(max-width:768px){
+   
+}
+
+.hero{
+   display:flex;
+}
+.hero{
+   display:flex;
+}
+
+
+/* Responsive tout à la fin */
+@media(max-width:768px){
+   .hero{
+      flex-direction:column;
+   }
 }

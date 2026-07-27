@@ -194,7 +194,7 @@ if (elements.length > 0) {
     });
 
 }
-// ============compte à rebours en temps réel ============
+// ============compteurr ============
 const counters = document.querySelectorAll(".counter h3");
 const countersSection = document.querySelector(".counters");
 
@@ -244,7 +244,7 @@ if (counters.length > 0 && countersSection) {
 
 }
 
-
+// ====================compte a rebours en temps reel
 const conferenceDate = new Date("November 12, 2026 09:00:00").getTime();
 
 function updateCountdown() {
@@ -281,6 +281,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+// ================================filtrageee intervenanttt===============
 
 const categorySelect = document.getElementById("category-select");
 
@@ -305,7 +306,7 @@ if (categorySelect) {
     });
 
 }
-
+// ================================filtragee tabbbbbbbb==================
 const tabs = document.querySelectorAll(".tab");
 const plannings = document.querySelectorAll(".planning");
 

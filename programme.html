@@ -1,324 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>programme</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-            <!-- NAVBAR -->
+    <!-- NAVBAR -->
 
-<nav class="navbar">
-            <!-- logo -->
-            <a href="index.html" class="logo">
-                <img src="images/logo africonnect summit 2.png" alt="logo">
-                AfriConnect<span class="span"> Summit 2026</span>
-            </a>
-            <!-- liens -->
-            <ul class="nav-links">
-                <li>
-                    <a href="index.html">Acceuil</a>
-                </li>
-                <li>
-                    <a href="programme.html">Programme</a>
-                </li>
-                <li>
-                    <a href="intervenants.html">Intervenants</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
+    <nav class="navbar">
+        <!-- logo -->
+        <a href="index.html" class="logo">
+            <img src="images/logoafriconnectsummit2.png" alt="logo">
+            AfriConnect<span class="span"> Summit 2026</span>
+        </a>
+        <!-- liens -->
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Acceuil</a>
+            </li>
+            <li>
+                <a href="programme.html">Programme</a>
+            </li>
+            <li>
+                <a href="intervenants.html">Intervenants</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
 
 
 
-            <div class="icon-nav">
-                <!-- Dark mode -->
-                <button id="themebtn">
-                    <i class="bi bi-moon"></i>
-                </button>
-                <!-- Menu Hamburger -->
-                <button id="menubtn">
-                    <i class="bi bi-list"></i>
-                </button>
+        <div class="icon-nav">
+            <!-- Dark mode -->
+            <button id="themebtn">
+                <i class="bi bi-moon"></i>
+            </button>
+            <!-- Menu Hamburger -->
+            <button id="menubtn">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+
+    </nav>
+
+    <!-- ======================HERO========================= -->
+    <section class="hero-programme slide-in">
+        <div class="overlay">
+            <h1>Programme de la Conférence</h1>
+            <p>
+                <a href="index.html">Acceuil</a>
+                >
+                Programme
+            </p>
+
+        </div>
+    </section>
+
+    <!-- ================Programme=================== -->
+    <section class="programme zoom-in">
+        <h2>Planning des conférences</h2>
+        <div class="tabs">
+            <button class="tab active" data-day="jour1">
+                Jour 1
+            </button>
+            <button class="tab " data-day="jour2">
+                Jour 2
+            </button>
+            <button class="tab " data-day="jour3">
+                Jour 3
+            </button>
+
+        </div>
+    </section>
+
+    <!-- jour1 -->
+    <div class="planning active" id="jour1">
+        <table>
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+            </thead>
+
+
+            <!-- <tbody> -->
+            <tr>
+                <td>09:00</td>
+                <td>Ouverture officiel</td>
+                <td>Dr Amina Diallo</td>
+                <td>Salle A</td>
+            </tr>
+
+            <tr>
+                <td>10:30</td>
+                <td>Intelligence Artificielle</td>
+                <td>Jean Kouassi</td>
+                <td>Salle B</td>
+            </tr>
+
+            <tr>
+                <td>12:00</td>
+                <td>Pause Déjeuner</td>
+                <td>-</td>
+                <td>Hall Central</td>
+            </tr>
+
+            <tr>
+                <td>14:00</td>
+                <td>Cybersécurité</td>
+                <td>Fatou Ndiaye</td>
+                <td>Salle C</td>
+            </tr>
+
+
+            <tr>
+                <td>16:00</td>
+                <td>Networking</td>
+                <td>Tous les participants</td>
+                <td>Terasse</td>
+            </tr>
+        </table>
+        <!-- </tbody> -->
+    </div>
+
+    <!-- jour2 -->
+    <div class="planning " id="jour2">
+        <table>
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+            </thead>
+
+            <!-- <tbody> -->
+            <tr>
+                <td>09:00</td>
+                <td>Cloud computing</td>
+                <td>Momadou Ndao</td>
+                <td>Salle A</td>
+            </tr>
+
+            <tr>
+                <td>10:30</td>
+                <td>DevOps</td>
+                <td>Lana Diallo</td>
+                <td>Salle B</td>
+            </tr>
+
+            <tr>
+                <td>12:00</td>
+                <td>Pause Déjeuner</td>
+                <td>-</td>
+                <td>Hall Central</td>
+            </tr>
+
+            <tr>
+                <td>14:00</td>
+                <td>Data Science</td>
+                <td>Azeez salla</td>
+                <td>Salle C</td>
+            </tr>
+
+
+            <tr>
+                <td>16:00</td>
+                <td>Startup Pitch</td>
+                <td>Jeune Entrepreneuse</td>
+                <td>Auditorium</td>
+            </tr>
+        </table>
+        <!-- </tbody> -->
+    </div>
+
+
+    <!-- jou3 -->
+    <div class="planning " id="jour3">
+        <table>
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+            </thead>
+
+
+            <!-- <tbody> -->
+            <tr>
+                <td>09:00</td>
+                <td>Green Tech</td>
+                <td>Fatou Deme</td>
+                <td>Salle A</td>
+            </tr>
+
+            <tr>
+                <td>10:30</td>
+                <td>Blockchain</td>
+                <td>Touachi dembelle</td>
+                <td>Salle B</td>
+            </tr>
+
+            <tr>
+                <td>12:00</td>
+                <td>Pause Déjeuner</td>
+                <td>-</td>
+                <td>Hall Central</td>
+            </tr>
+
+            <tr>
+                <td>14:00</td>
+                <td>Carrières dans la Tech</td>
+                <td>Linda Sow</td>
+                <td>Salle C</td>
+            </tr>
+
+
+            <tr>
+                <td>16:00</td>
+                <td>Cérémonie de clôture</td>
+                <td>Comité d'organisation</td>
+                <td>Grande salle</td>
+            </tr>
+        </table>
+        <!-- </tbody> -->
+
+    </div>
+
+    <!-- =======================Thematique=============== -->
+    <section class="pourquoi fade-in">
+        <h2>Les grandes thématiques</h2>
+        <div class="pourquoi-container">
+            <div class="card">
+                <i class="bi bi-cpu-fill"></i>
+                <h3>Intelligence Artificielle</h3>
+
+                <p>
+                    Découvrez les dernières avancées de l'IA appliquées aux entreprises africaines.
+                </p>
             </div>
 
-        </nav>
+            <div class="card">
+                <i class="bi bi-cloud-fill"></i>
+                <h3>Cloud Computing </h3>
 
-<!-- ======================HERO========================= -->
-<section class="hero-programme slide-in">
-    <div class="overlay">
-        <h1>Programme de la Conférence</h1>
-        <p>
-            <a href="index.html">Acceuil</a>
-            >
-            Programme
-        </p>
+                <p>
+                    Les meilleures solutions cloud pour accompagner la transformation numérique.
 
-    </div>
-</section>
+                </p>
+            </div>
 
-<!-- ================Programme=================== -->
- <section class="programme zoom-in">
-    <h2>Planning des conférences</h2>
-    <div class="tabs">
-        <button class="tab active" data-day="jour1">
-            Jour 1
-        </button>
-        <button class="tab " data-day="jour2">
-            Jour 2
-        </button>
-        <button class="tab " data-day="jour3">
-            Jour 3
-        </button>
+            <div class="card">
+                <i class="bi bi-shield-lock-fill"></i>
+                <h3>Cybersécurité </h3>
 
-    </div>
- </section>
+                <p>
+                    Sécuriser les données et protéger les infrastructures numériques.
+                </p>
+            </div>
 
- <!-- jour1 -->
-  <div class="planning active" id="jour1">
-    <table>
-        <thead>
-            <tr>
-                <th>Heure</th>
-                <th>Session</th>
-                <th>Intervenant</th>
-                <th>Salle</th>
-            </tr>
-        </thead>
-  
+            <div class="card">
+                <i class="bi bi-lightbulb-fill"></i>
+                <h3>Innovation & Startups </h3>
 
-    <!-- <tbody> -->
-        <tr>
-            <td>09:00</td>
-            <td>Ouverture officiel</td>
-            <td>Dr Amina Diallo</td>
-            <td>Salle A</td>
-        </tr>
+                <p>
+                    Découvrir les innovations qui façonnent l'avenir de l'Afrique.
+                </p>
+            </div>
 
-        <tr>
-            <td>10:30</td>
-            <td>Intelligence Artificielle</td>
-            <td>Jean Kouassi</td>
-            <td>Salle B</td>
-        </tr>
-
-        <tr>
-            <td>12:00</td>
-            <td>Pause Déjeuner</td>
-            <td>-</td>
-            <td>Hall Central</td>
-        </tr>
-
-        <tr>
-            <td>14:00</td>
-            <td>Cybersécurité</td>
-            <td>Fatou Ndiaye</td>
-            <td>Salle C</td>
-        </tr>
-
-        
-        <tr>
-            <td>16:00</td>
-            <td>Networking</td>
-            <td>Tous les participants</td>
-            <td>Terasse</td>
-        </tr>
-      </table>   
-    <!-- </tbody> -->
-  </div>
-
-<!-- jour2 -->
-<div class="planning " id="jour2">
-    <table>
-        <thead>
-            <tr>
-                <th>Heure</th>
-                <th>Session</th>
-                <th>Intervenant</th>
-                <th>Salle</th>
-            </tr>
-        </thead>
-
-<!-- <tbody> -->
-        <tr>
-            <td>09:00</td>
-            <td>Cloud computing</td>
-            <td>Momadou Ndao</td>
-            <td>Salle A</td>
-        </tr>
-
-        <tr>
-            <td>10:30</td>
-            <td>DevOps</td>
-            <td>Lana Diallo</td>
-            <td>Salle B</td>
-        </tr>
-
-        <tr>
-            <td>12:00</td>
-            <td>Pause Déjeuner</td>
-            <td>-</td>
-            <td>Hall Central</td>
-        </tr>
-
-        <tr>
-            <td>14:00</td>
-            <td>Data Science</td>
-            <td>Azeez salla</td>
-            <td>Salle C</td>
-        </tr>
-
-        
-        <tr>
-            <td>16:00</td>
-            <td>Startup Pitch</td>
-            <td>Jeune Entrepreneuse</td>
-            <td>Auditorium</td>
-        </tr>
- </table>
-<!-- </tbody> -->
-  </div>
-
-
-  <!-- jou3 -->
-<div class="planning " id="jour3">
-    <table>
-        <thead>
-            <tr>
-                <th>Heure</th>
-                <th>Session</th>
-                <th>Intervenant</th>
-                <th>Salle</th>
-            </tr>
-        </thead>
-   
-
-    <!-- <tbody> -->
-        <tr>
-            <td>09:00</td>
-            <td>Green Tech</td>
-            <td>Fatou Deme</td>
-            <td>Salle A</td>
-        </tr>
-
-        <tr>
-            <td>10:30</td>
-            <td>Blockchain</td>
-            <td>Touachi dembelle</td>
-            <td>Salle B</td>
-        </tr>
-
-        <tr>
-            <td>12:00</td>
-            <td>Pause Déjeuner</td>
-            <td>-</td>
-            <td>Hall Central</td>
-        </tr>
-
-        <tr>
-            <td>14:00</td>
-            <td>Carrières dans la Tech</td>
-            <td>Linda Sow</td>
-            <td>Salle C</td>
-        </tr>
-
-        
-        <tr>
-            <td>16:00</td>
-            <td>Cérémonie de clôture</td>
-            <td>Comité d'organisation</td>
-            <td>Grande salle</td>
-        </tr>
-    </table>
-    <!-- </tbody> -->
-
-  </div>
-
-<!-- =======================Thematique=============== -->
-<section class="pourquoi fade-in">
-<h2>Les grandes thématiques</h2>
-<div class="pourquoi-container">
-    <div class="card">
-        <i class="bi bi-cpu-fill"></i>
-        <h3>Intelligence Artificielle</h3>
-
-        <p>
-        Découvrez les dernières avancées de l'IA appliquées aux entreprises africaines.
-        </p>
-    </div>
-
-     <div class="card">
-        <i class="bi bi-cloud-fill"></i>
-        <h3>Cloud Computing </h3>
-
-        <p>
-            Les meilleures solutions cloud pour accompagner la transformation numérique.
-
-        </p>
-    </div>
-
-     <div class="card">
-        <i class="bi bi-shield-lock-fill"></i>
-        <h3>Cybersécurité </h3>
-
-        <p>
-        Sécuriser les données et protéger les infrastructures numériques.
-        </p>
-    </div>
-
-     <div class="card">
-        <i class="bi bi-lightbulb-fill"></i>
-        <h3>Innovation & Startups </h3>
-
-        <p>
-        Découvrir les innovations qui façonnent l'avenir de l'Afrique.
-        </p>
-    </div>
-
-</div>
-</section>
+        </div>
+    </section>
 
 
 
 
 
- <!-- ==============footer============== -->
-  <footer class="footer">
+    <!-- ==============footer============== -->
+    <footer class="footer">
         <div class="footer-container">
             <div>
-                <img src="images/logo africonnect summit 2.png" alt="logo" height="60px">
-              <p>AfriConnect Summit © 2026</p>
+                <img src="images/logoafriconnectsummit2.png" alt="logo" height="60">
+                <p>AfriConnect Summit © 2026</p>
             </div>
 
             <div>
                 <h3>Navigation</h3>
                 <ul class="links">
-                <li><a href="index.html">Acceuil</a></li>
-                <li><a href="programme.html">Programme</a></li>
-                <li><a href="intervenants.html">Intervenats</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenats</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3>Suivez-nous</h3>
                 <p><i class="bi bi-envelope-fill"></i>contact@AfriTalent.com</p>
-          <p><i class="bi bi-telephone-fill"></i> 33 000 00 00</p>
-          <!-- les icons -->
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-twitter"></i>
-            <i class="bi bi-facebook"></i>
-        </div>        
+                <p><i class="bi bi-telephone-fill"></i> 33 000 00 00</p>
+                <!-- les icons -->
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-facebook"></i>
+            </div>
         </div>
-       
+
         <button id="backtop">
             ↑
         </button>
     </footer>
     <p>
-            © <span id="year"></span> AfriConnect Summit. Tous droits réservés.
+        © <span id="year"></span> AfriConnect Summit. Tous droits réservés.
     </p>
 
 
@@ -328,10 +330,11 @@
 
 
 
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap"
-    rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
- <!-- Votre script JavaScript -->
-  <script src="js/main.js"></script>
+    <!-- Votre script JavaScript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
