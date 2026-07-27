@@ -1224,3 +1224,16 @@ small{
     opacity: 1;
     transform: scale(1);
 }
+
+.planning{
+    display: none;
+}
+
+.planning.active{
+    display: block;
+}
+
+.tab.active{
+    background: #6b46c1;
+    color: white;
+}

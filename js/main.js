@@ -1,63 +1,90 @@
 // ==================navbar
 const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-});
+if (navbar) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+}
 // =============menu burger
 const menuBtn = document.getElementById("menubtn");
 const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-const themeBtn = document.getElementById("themebtn");
-const body = document.body;
-const icon = themeBtn.querySelector("i");
-
-// Vérifie le thème enregistré
-if(localStorage.getItem("theme") === "dark"){
-    body.classList.add("dark-mode");
-    icon.classList.remove("bi-moon");
-    icon.classList.add("bi-sun");
+if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 }
+// Vérifie le thème enregistré
+const themeBtn = document.getElementById("themebtn");
 
-// Changement de thème
-themeBtn.addEventListener("click", () => {
+if (themeBtn) {
 
-    body.classList.toggle("dark-mode");
+    const body = document.body;
+    const icon = themeBtn.querySelector("i");
 
-    if(body.classList.contains("dark-mode")){
-        localStorage.setItem("theme","dark");
-        icon.classList.remove("bi-moon");
-        icon.classList.add("bi-sun");
-    }else{
-        localStorage.setItem("theme","light");
-        icon.classList.remove("bi-sun");
-        icon.classList.add("bi-moon");
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+
+        if (icon) {
+            icon.classList.remove("bi-moon");
+            icon.classList.add("bi-sun");
+        }
     }
 
-});
-// button scroler
+    themeBtn.addEventListener("click", () => {
+
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+
+            if (icon) {
+                icon.classList.remove("bi-moon");
+                icon.classList.add("bi-sun");
+            }
+
+        } else {
+
+            localStorage.setItem("theme", "light");
+
+            if (icon) {
+                icon.classList.remove("bi-sun");
+                icon.classList.add("bi-moon");
+            }
+        }
+
+    });
+
+}
 const backtop = document.getElementById("backtop");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-        backtop.style.display = "block";
-    } else {
-        backtop.style.display = "none";
-    }
-});
-backtop.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+if (backtop) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 200) {
+            backtop.style.display = "block";
+        } else {
+            backtop.style.display = "none";
+        }
+
     });
-});
+
+    backtop.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
 // ================= Validation du formulaire =================
 
 const form = document.querySelector(".contactform");
@@ -65,9 +92,9 @@ const form = document.querySelector(".contactform");
 if (form) {
 
     form.addEventListener("submit", function (e) {
+
         e.preventDefault();
 
-        // Champs
         const nom = document.getElementById("nom");
         const email = document.getElementById("email");
         const telephone = document.getElementById("telephone");
@@ -75,7 +102,6 @@ if (form) {
         const pays = document.getElementById("pays");
         const message = document.getElementById("message");
 
-        // Erreurs
         const errorNom = document.getElementById("errornom");
         const errorEmail = document.getElementById("erroremail");
         const errorTelephone = document.getElementById("errortelephone");
@@ -85,7 +111,6 @@ if (form) {
 
         const success = document.getElementById("successMessage");
 
-        // Réinitialisation
         errorNom.textContent = "";
         errorEmail.textContent = "";
         errorTelephone.textContent = "";
@@ -96,13 +121,11 @@ if (form) {
 
         let valide = true;
 
-        // Nom
         if (nom.value.trim() === "") {
             errorNom.textContent = "Le nom est obligatoire.";
             valide = false;
         }
 
-        // Email
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (email.value.trim() === "") {
@@ -113,25 +136,21 @@ if (form) {
             valide = false;
         }
 
-        // Téléphone
         if (telephone.value.trim() === "") {
             errorTelephone.textContent = "Le téléphone est obligatoire.";
             valide = false;
         }
 
-        // Type
         if (type.value === "") {
             errorType.textContent = "Choisissez un type de participation.";
             valide = false;
         }
 
-        // Pays
         if (pays.value === "") {
             errorPays.textContent = "Choisissez un pays.";
             valide = false;
         }
 
-        // Message
         if (message.value.trim() === "") {
             errorMessage.textContent = "La motivation est obligatoire.";
             valide = false;
@@ -140,7 +159,6 @@ if (form) {
             valide = false;
         }
 
-        // Succès
         if (valide) {
             success.textContent = "Inscription envoyée avec succès !";
             success.style.color = "green";
@@ -155,81 +173,168 @@ if (form) {
 
 const elements = document.querySelectorAll(".fade-in, .slide-in, .zoom-in");
 
-const observer = new IntersectionObserver((entries) => {
+if (elements.length > 0) {
 
-    entries.forEach(entry => {
+    const fadeObserver = new IntersectionObserver((entries) => {
 
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
+        entries.forEach(entry => {
 
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
     });
 
-}, {
-    threshold: 0.2
-});
+    elements.forEach(element => {
+        fadeObserver.observe(element);
+    });
 
-elements.forEach(element => {
-    observer.observe(element);
-});
+}
 // ============compte à rebours en temps réel ============
-const conferenceDate = new Date("November 15, 2026 09:00:00").getTime();
+const counters = document.querySelectorAll(".counter h3");
+const countersSection = document.querySelector(".counters");
+
+if (counters.length > 0 && countersSection) {
+
+    const counterObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                counters.forEach(counter => {
+
+                    const target = parseInt(counter.dataset.target);
+                    let count = 0;
+
+                    const increment = Math.ceil(target / 100);
+
+                    function updateCounter() {
+
+                        count += increment;
+
+                        if (count >= target) {
+                            counter.textContent = target;
+                        } else {
+                            counter.textContent = count;
+                            requestAnimationFrame(updateCounter);
+                        }
+
+                    }
+
+                    updateCounter();
+
+                });
+
+                counterObserver.disconnect();
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.5
+    });
+
+    counterObserver.observe(countersSection);
+
+}
+
+
+const conferenceDate = new Date("November 12, 2026 09:00:00").getTime();
 
 function updateCountdown() {
+
+    const jour = document.getElementById("jour");
+    const heures = document.getElementById("heures");
+    const minutes = document.getElementById("minutes");
+    const secondes = document.getElementById("secondes");
+
+    if (!jour || !heures || !minutes || !secondes) return;
+
     const now = new Date().getTime();
     const distance = conferenceDate - now;
 
     if (distance <= 0) {
-        document.getElementById("jour").textContent = "00";
-        document.getElementById("heures").textContent = "00";
-        document.getElementById("Minutes").textContent = "00";
-        document.getElementById("Secondes").textContent = "00";
+        jour.textContent = "00";
+        heures.textContent = "00";
+        minutes.textContent = "00";
+        secondes.textContent = "00";
         return;
     }
 
     const jours = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const heures = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const secondes = Math.floor((distance % (1000 * 60)) / 1000);
-const counters = document.querySelectorAll(".counter h3");
-// =====================compteurrr
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
+    const hrs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((distance % (1000 * 60)) / 1000);
 
-            counters.forEach(counter => {
-                const target = +counter.dataset.target;
-                let count = 0;
-
-                const increment = Math.max(1, Math.ceil(target / 100));
-
-                const updateCounter = () => {
-                    count += increment;
-
-                    if (count >= target) {
-                        counter.textContent = target;
-                    } else {
-                        counter.textContent = count;
-                        requestAnimationFrame(updateCounter);
-                    }
-                };
-
-                updateCounter();
-            });
-
-            observer.disconnect(); // L'animation ne se lance qu'une seule fois
-        }
-    });
-}, {
-    threshold: 0.5
-});
-
-observer.observe(document.querySelector(".counters"));
-    document.getElementById("jour").textContent = String(jours).padStart(2, "0");
-    document.getElementById("heures").textContent = String(heures).padStart(2, "0");
-    document.getElementById("Minutes").textContent = String(minutes).padStart(2, "0");
-    document.getElementById("Secondes").textContent = String(secondes).padStart(2, "0");
+    jour.textContent = String(jours).padStart(2, "0");
+    heures.textContent = String(hrs).padStart(2, "0");
+    minutes.textContent = String(mins).padStart(2, "0");
+    secondes.textContent = String(secs).padStart(2, "0");
 }
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+
+const categorySelect = document.getElementById("category-select");
+
+if (categorySelect) {
+
+    const cards = document.querySelectorAll(".intervenant-card");
+
+    categorySelect.addEventListener("change", function () {
+
+        const value = this.value;
+
+        cards.forEach(card => {
+
+            if (value === "all" || card.dataset.category === value) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+}
+
+const tabs = document.querySelectorAll(".tab");
+const plannings = document.querySelectorAll(".planning");
+
+if (tabs.length > 0 && plannings.length > 0) {
+
+    tabs.forEach(tab => {
+
+        tab.addEventListener("click", () => {
+
+            tabs.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            tab.classList.add("active");
+
+            const day = tab.dataset.day;
+
+            plannings.forEach(planning => {
+
+                if (planning.id === day) {
+                    planning.classList.add("active");
+                } else {
+                    planning.classList.remove("active");
+                }
+
+            });
+
+        });
+
+    });
+
+}
